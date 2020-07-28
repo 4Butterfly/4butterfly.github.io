@@ -27,23 +27,40 @@
 
 <body>
 
-	 <header id="particles-js" >
-		<div class="top-line">
-			<p class="logo"><a href="/">Tkachenko</a></p>
-			<nav class="site-nav">
-				<a href="" class="nav-item">Работы</a>
-				<a href="" class="nav-item">Навыки</a>
-				<a href="" class="nav-item"> О себе</a>
-			</nav>
-		</div>
-		<div class="welcome-text">
-			<h1 class="h1">Начинающий верстальщик</h1>
-			<p class="bottom-text"><span>HTML-верстальщик</span> <i> - </i> Ярослав Ткаченко</p>
-			<div class="button">Подробнее</div>
-		</div>
+	<header class="top-line">
+		<p class="logo"><a href="/">Tkachenko</a></p>
+		<nav class="site-nav">
+			<a href="#works" class="nav-item">Работы</a>
+			<a href="" class="nav-item">Навыки</a>
+			<a href="" class="nav-item"> О себе</a>
+		</nav>
 	</header>
 	<main>
-<section class="works"></section>
+		<section class="welcome" id="particles-js">
+			<div class="welcome-text">
+				<h1 class="h1">Начинающий верстальщик</h1>
+				<p class="bottom-text"><span>HTML-верстальщик</span> <i> - </i> Ярослав Ткаченко</p>
+				<a href="#works" class="button">Подробнее</a>
+			</div>
+		</section>
+		<section id="works">
+			<div class="title">
+				<h2 class="h2">Работы</h2>
+				<p class="bottom-text">я еще учусь</p>
+			</div>
+			<div class="works-content">
+				<article class="work-item item1">
+					<div class="work-item-text" >
+						<a href="" class="button button-works">Перейти</a>
+					</div>
+				</article>
+				<article class="work-item item2">
+					<div class="work-item-text">
+						<a href="" class="button button-works">Перейти</a>
+					</div>
+				</article>
+			</div>
+		</section>
 	</main>
 
 	<script src="js/scripts.min.js"></script>
