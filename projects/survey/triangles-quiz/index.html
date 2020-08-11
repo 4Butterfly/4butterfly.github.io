@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="desktop-device">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quiz</title>
+	<link rel="stylesheet" href="../assets/css.css">
+	<link rel="stylesheet" href="../assets/quiz.css">
+	<link media="all" type="text/css" rel="stylesheet" href="../assets/home.css">
+	<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon.png">
+</head>
+
+<body class="inner iqQuiz">
+
+	<div class="home-header-container">
+		<div class="home-header">
+			<a href="/" class="logo"><img src="../assets/logo.svg"></a>
+			<a href="/" class="button col-sm-hide"
+				style="background: #d64848 !important; float: right; border-radius: 4px; padding: 12px 40px; text-decoration: none;">Get
+				Started</a>
+		</div>
+	</div>
+	<div id="wrapper">
+
+	<div class="wrapper step-1">
+		<div class="container">
+			<div class="content indexContent">
+				<div class="animatePrize"><a href="#" class="skip prizeDrop"
+						style="opacity: 1; display: block; top: 22px; position: absolute; transform: rotate(-1deg); left: 550px; bottom: -2px;"><img
+							src="../assets/grocery.png"></a>
+					<h1 class="my-title" style="width: 550px; ">How Many Triangles?</h1>
+					<div class="introText">
+						<p>How smart are you? Try to count all the triangles! Over 95% of Americans can't get it right! To pass the
+							quiz you should enter the correct answer.</p>
+					</div>
+					<ul class="resultsLegend">
+						<li class="fail"><em>If You Fail:</em> You get nothing.</li>
+						<li class="pass"><em>If You Pass:</em> <b>You can get a Grocery Voucher!</b> </li>
+					</ul>
+				</div>
+				<div class="startButtonContainer"> <a href="#" class="button-quiz button skip startButton" id="startButton"> Take Quiz! </a> </div>
+			</div>
+			<div class="content content-comments">
+				<div class="comments">
+					<div class="stat_elem"> <span class="count_comment">5 comments</span> <span class="add_comment">Comment</span>
+					</div>
+					<div class="message-box clearfix"> <img src="../assets/i1.jpg">
+						<div class="message"> <span class="profile_name">Paul Murphy</span> That's what i call - i came, i saw, i
+							conquered!<br>Shame i learned a bit late, otherwise i would've had my gift!<br>Highly recommend this quiz
+							<div> <span class="action_links">Reply · Like · Share</span> </div>
+						</div>
+					</div>
+					<div class="message-box clearfix"> <img src="../assets/i2.jpg">
+						<div class="message"> <span class="profile_name">Mohan Leach</span> Passed the quiz, filled out the form and
+							got a jolly Grocery Voucher. Recommended! <div> <span class="action_links">Reply · Like · Share</span>
+							</div>
+						</div>
+					</div>
+					<div class="message-box clearfix"> <img src="../assets/i3.jpg">
+						<div class="message"> <span class="profile_name">Luka Sundic</span> Wow! Thanks a bunch, went through the
+							quiz and got a gift! <div> <span class="action_links">Reply · Like · Share</span> </div>
+						</div>
+					</div>
+					<div class="message-box clearfix"> <img src="../assets/i4.jpg">
+						<div class="message"> <span class="profile_name">Elishaa-Skyee Watts</span> Pity i found out about this site
+							too late :( Great quiz and gift aways <div> <span class="action_links">Reply · Like · Share</span> </div>
+						</div>
+					</div>
+					<div class="message-box clearfix"> <img src="../assets/i5.jpg">
+						<div class="message"> <span class="profile_name">Pep Gallasiola</span> Great, the quiz is dead easy and the
+							gift is rather nice. Cheers! <div> <span class="action_links">Reply · Like · Share</span> </div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			
+		</div>
+	</div>
+	<div class="wrapper step-2" style="display: none;">
+		<div class="container">
+			<div class="content ">
+				<style>
+					.trianglesAnswer {
+						font-size: 26px;
+					}
+				</style><span id="timer" style="top: 0px;">Time Left<span class="timer">03:00</span></span>
+				<h1 class="step2h1 my-title">How Many Triangles?</h1>
+				<p class="step2description" style="margin-right: 200px; "><b>Remember:</b> 95.6% of Americans can't get this
+					test right! If you pass it, you could win a Grocery Voucher!</p>
+				<form method="get" id="form2"><input type="hidden" name="step" value="3">
+					<div style="text-align: center; "><img src="../assets/triangles.png" class="triangles-image">
+						<div class="trianglesAnswer">Type your answer here: <input type="number" min="1" class="trianglesNumber"
+								name="trianglesNumber"></div>
+					</div>
+					<div style="text-align: center; position: relative; display: block; z-index: 10000; "><input type="submit"
+							class="submitAnswers startButton button button-quiz" id="submitAnswers" value="SUBMIT YOUR ANSWER!"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper step-3" style="display: none;">
+		<div class="container">
+			<div class="content ">
+
+				<div class="results">
+					<h1 class="my-title">Your Quiz Results</h1>
+					<p class="loader-fragment" style="">Please wait while we check your answers.</p>
+					<p>95.6% of Americans answer <b id="answer-err">10</b>.</p>
+					<h3 class="loaderHeader loader-fragment" style="">Loading...</h3>
+					<div id="loader1" class="loader-fragment" style=""></div>
+					<div id="result" style="display: none;">
+						<div id="result" style="">
+							<div class="result"><img src="../assets/tick.png"><strong>Congratulations!</strong> Your answer <span
+									id="answer-true">12</span> is correct! <em>You passed!</em></div><a href="#" class="actionButton"
+								id="offerButton" onclick=""><span class="text">You are eligible to receive<br>a Grocery
+									Voucher!</span><span class="button-itself">Continue &gt;</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<footer>
+		<div class="footer-blk">
+			<div class="footer-links-copyright">
+				<div class="footer-links-column footer-links-column-connect">
+					<div>
+						<h6>© 2020 Survey Place</h6>
+					</div>
+					<div class="copyright">
+						<!-- <div class="copyright-main">© 2020 Survey Place</div> -->
+						Trademarks
+						including "Survey Place" are the property of Survey Place, all rights
+						reserved. All non-Survey Place owned trademarks appearing on this site
+						are property of their respective owners.<div class="copyright-secondary">Said owners do not endorse nor are
+							they affiliated with Survey Place or its promotions.</div>
+					</div>
+				</div>
+				<ul class="footer-links">
+					<li><a href="/terms.html" id="footer-terms-link">Terms</a></li>
+					<li>|</li>
+					<li><a href="/privacy.html" id="footer-privacy-link">Privacy Policy</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script src="../assets/jquery.js"></script>
+	<script src="../assets/jrumble.1.1.min.js"></script>
+	<script src="../assets/quiz.js"></script>
+</body>
+
+</html>
